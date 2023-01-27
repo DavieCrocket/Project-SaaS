@@ -1,0 +1,33 @@
+.pageContainer {
+  max-width: 1400px;
+}
+
+.logoNavBar {
+  display: flex;
+  margin-top: 50px;
+}
+
+.logoNavBar .logo img{
+  width: 200px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.navBar {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.navBar ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navBar ul li{
+  padding: 5px 20px;
+  font-size: 30px;
+  line-height: .8;
+}
+

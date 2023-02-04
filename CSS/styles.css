@@ -233,3 +233,20 @@
 .card h5 {
   color: var(--font-color-link)
 }
+
+.premium {
+  display: flex;
+  align-items: center;
+}
+
+.premium .btn-small {
+  background-color: rgba(11, 204, 37, 0.35);
+  color: green;
+  border: 1px solid rgb(36, 118, 255);
+  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.35);
+  min-width: 95px;
+  height: 30px;
+  margin-left: 20px;
+  align-items: center;
+}
+

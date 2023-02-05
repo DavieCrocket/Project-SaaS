@@ -155,6 +155,12 @@
   margin-top: 10px;
 }
 
+.btn-wrapper {
+  display: flex;
+  justify-content: start;
+}
+
+.btn-wrapper .btn-link,
 .play-learn .btn-link {
   width: 150px;
 }
@@ -174,6 +180,12 @@
   bottom: 30px;
 }
 
+.playVideo2 {
+  position: relative;
+  left: 15px;
+  bottom: 33px;
+}
+
 .learn-more {
   display: flex;
   color: var(--font-color-link);
@@ -185,9 +197,16 @@
   font-size: 16px;
 }
 
+.banner,
 .keyBenefits {
   margin-left: 50px;
-  margin-top: 150px;
+  margin-top: 75px;
+  padding-top: 75px;
+}
+
+.banner {
+  background-color: rgba(248, 250, 254, 0.8);
+  margin-bottom: 50px;
 }
 
 .cardHead {
@@ -210,12 +229,12 @@
 
 .benefitCards {
   display: grid;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--size-30)
 }
 
@@ -225,7 +244,7 @@
 
 .card {
   padding: var(--size-30);
-  box-shadow: 0 0 10px rgba(48, 63, 100, 15%);
+  box-shadow: 0 0 20px rgba(48, 63, 100, 25%);
   background: var(--white);
   border-radius: 8px;
 }
@@ -249,4 +268,19 @@
   margin-left: 20px;
   align-items: center;
 }
+
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--size-30)
+}
+
+.leftPanel {
+  margin: 25px;
+}
+
+.banner img {
+  width: 500px;
+}
+
 

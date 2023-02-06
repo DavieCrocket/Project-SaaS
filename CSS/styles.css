@@ -320,7 +320,7 @@
   justify-content: center;
   align-items: start;
   min-width: 500px;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 }
 
 .bulletLeft .l-wing {
@@ -367,4 +367,32 @@
 .wing img{
   align-items: center;
   width: 100%;
+}
+
+.bannerPlay {
+  display: grid;
+  justify-content: center;
+  margin: 0 50px;
+}
+
+.bnrPlay img {
+  width: 100%;
+  height: auto;
+}
+
+.bannerPlay {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+
+.plyBtn {
+  display: grid;
+  border: 1px solid rgba(226, 226, 226, 0.8);
+  border-radius: 50%;
+  box-shadow: 0px 10px 20px rgba(226, 226, 226, 0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
 }

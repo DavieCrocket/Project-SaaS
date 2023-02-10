@@ -392,7 +392,84 @@
   border-radius: 50%;
   box-shadow: 0px 10px 20px rgba(226, 226, 226, 0.8);
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 45%;
+  left: 48%;
   cursor: pointer;
 }
+
+.hubSpot {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: var(--size-30);
+  margin-top: 100px;
+  margin-left: 50px;
+  height: 550px;
+}
+
+.hubLeft {
+  display: inline;
+}
+
+.hubLeft .dots {
+  position: relative;
+  top: -323px;
+  left: 20px;
+}
+
+.hubLeft .director {
+  position: relative;
+  left: 75px;
+  z-index: 10;
+}
+
+.hubLeft .dots img {
+  width: 200px;
+}
+
+.hubLeft .director img {
+  width: 375px;
+}
+
+.hubRight {
+  justify-content: left;
+  align-items: center;
+
+}
+
+.hubRight p {
+  width: min-max(200px, 500px);
+}
+
+.hslogo img {
+  width: 100px;
+  height: 24px;
+  position: relative;
+  left: -13px;
+}
+
+.brandsSection {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.whyFront {
+  display: grid;
+}
+
+.brandsList {
+  display: grid;
+  width: 1100px;
+}
+
+.brands {
+  display: flex;
+  justify-content:space-between;
+}
+
+.brands img {
+  width: 150px;
+  height: 70px;
+  margin: 0 20px;
+}
+ 

@@ -3,6 +3,7 @@
   --white: #FFF;
   --black: #000;
   --font-color-base: #666;
+  --font-color-base-light: rgba(230, 232, 242, 0.5);
   --font-color-dark: #212529;
   --font-color-light: #B0AEBE;
   --font-color-link: #2476FF;
@@ -99,3 +100,5 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* p { margin: none } */

@@ -12,7 +12,7 @@
 
 .logoNavBar {
   display: flex;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .logoNavBar .logo img{
@@ -57,6 +57,7 @@
   font-size: 14px;
   color: white;
   margin-top: 12px;
+  width: 115px;
 }
 
 .empTeams,
@@ -272,6 +273,7 @@
  .premium {
   display: flex;
   align-items: center;
+  height: 52px;
 }
 
 .submitButton1 {
@@ -293,7 +295,7 @@
 .submitButton1 p {
   display: grid;
   position: relative;
-  bottom: 8px;
+  bottom: 10px;
 }
 
 .card .withButton,

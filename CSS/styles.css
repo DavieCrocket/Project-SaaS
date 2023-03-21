@@ -262,6 +262,7 @@
   background: var(--white);
   border-radius: 8px;
   max-width: 400px;
+  cursor: pointer;
 }
 
 .card h5 {
@@ -276,7 +277,6 @@
 .submitButton1 {
   display: flex;
   justify-content: center;
-  /* margin-top: 35px; */
 }
 
 .submitButton1 button {
@@ -389,7 +389,7 @@
   right: 30px;
 }
 
-.components {
+.componentsLabel {
   position: relative;
   left: 70px;
 }
@@ -450,14 +450,14 @@
 }
 
 .hubLeft {
-  display: grid;
+  display: flex;
   height: 500px;
 }
 
 .hubLeft .dots {
   position: relative;
-  top: -323px;
-  left: 20px;
+  top: 100px;
+  left: -350px;
 }
 
 .hubLeft .director {
@@ -481,7 +481,7 @@
   justify-content: center;
   height: fit-content;
   align-content: center;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .hubRight .person {
@@ -505,10 +505,7 @@
 }
 
 .hslogo img {
-  width: 100px;
-  height: 24px;
-  position: relative;
-  left: -13px;
+  width: 125px;
 }
 
 .brandsSection {
@@ -516,7 +513,6 @@
   grid-template-rows: 2 / auto;
   justify-content: center;
   max-width: 1200px;
-  /* margin-top: -75px; */
 }
 
 .whyFront {
@@ -859,7 +855,8 @@
   padding-left: 5px;
 }
 
-.budget {
+.budget,
+.country {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -868,29 +865,11 @@
   grid-area: budget;
   border: 1px solid var(--font-color-base-light);
   border-radius: 5px;
-}
-
-.budget .downChevron {
-  padding-top: 5px;
-}
-
-.budget img {
-  width: 20px;
+  height: 40px;
 }
 
 .country {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 10px;
-  padding-left: 5px;
   grid-area: country;
-  border: 1px solid var(--font-color-base-light);
-  border-radius: 5px;
-}
-
-.country .downChevron {
-  padding-top: 5px;
 }
 
 .budget input,
@@ -899,8 +878,9 @@
   border: none;
 }
 
-.country img {
-  width: 20px;
+.budget i,
+.country i {
+  color var(--font-color-base-light);
 }
 
 .inputTellMore {
@@ -975,4 +955,183 @@
   background-color: var(--font-color-link);
   border-radius: 30px;
   width: 125px;
+}
+
+.footerSection {
+  display: grid;
+}
+
+.footerTopWrapper {
+  display: flex;
+  margin: 50px 0 50px 50px;
+}
+
+.footerCompanyContact {
+  display: flex;
+}
+
+.footerContact {
+  margin-right: 25px;
+}
+
+.footerContact img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footerContact span {
+  margin-right: 10px;
+  color: black;
+}
+
+.footerContact p {
+  margin: 3px;
+}
+
+.footerContact .colorLink {
+  color: var(--font-color-link);
+}
+
+.footerCompanyInfo  {
+  display: flex;
+  margin-left: 20px;
+}
+
+.company,
+.features,
+.documentation,
+.resources {
+  margin: 0 25px;
+}
+
+.footerCompanyInfo h2 {
+  margin-top: 0;
+}
+
+.footerCompanyInfo  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+}
+
+.hiringBtn {
+  display: flex;
+}
+
+.wereHiringBtn {
+  position: relative;
+  top: 7px;
+  margin-left: 5px;
+}
+
+.footerCompanyInfo .wereHiringBtn button {
+  background-color: var(--font-color-link);
+  height: 18px;
+  border-radius: 5px;
+}
+
+.footerCompanyInfo .wereHiringBtn p {
+  position: relative;
+  bottom: 9px;
+  color: white;
+  font-size: 10px;
+  min-width: 60px;
+}
+
+.footerLegalSocial {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.socialBtns {
+  display: flex;
+}
+
+.socialBtns i {
+  border: 1px solid transparent;
+  background-color: var(--font-color-base-light);
+}
+
+.socialButton {
+  display: flex;
+  width: 60px;
+  height: 45px;
+  border-radius: 5px;
+  align-content: center;
+}
+
+.socialButton button {
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.footerBottomWrapper {
+  display: grid;
+}
+
+.fa-facebook-f,
+.fa-google,
+.fa-twitter,
+.fa-github {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.countryDropDown {
+  display: flex;
+  align-items: center;
+  background-color: var(--font-color-base-light);
+  border-radius: 5px;
+}
+
+.countryDropDown .oldGlory {
+  margin: 0 10px;
+}
+
+.countryDropDown img {
+  height: 20px;
+  width: 20px;
+}
+
+.countryDropDown input {
+  border: none;
+  background-color: var(--font-color-base-light);
+}
+
+.downChevron {
+  margin-right: 10px;
+}
+
+.legal {
+  margin-right: auto;
+}
+
+.divider {
+  padding: 0 5px;
+  margin-bottom: 35px;
+}
+
+.divider hr {
+  color: var(--font-color-base-light);
+}
+
+.footerSection {
+  margin-left: 50px;
+}
+
+.copyrightTerms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.copyrightTerms .cookies {
+  max-width: 760px;
+  text-align: center;
+  margin-top: 10px;
 }

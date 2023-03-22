@@ -7,7 +7,28 @@
 }
 
 .logo {
-  margin-left: 50px;
+  margin-left: 30px;
+  margin-right: auto;
+}
+
+.navbar-toggler {
+  position: absolute;
+  right: var(--size-50);
+  top: var(--size-10);
+  outline: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.navbar-toggler span {
+  color: var(--white);
+  font-size: var(--size-20);
+  cursor: pointer;
+  pointer-events: none;
+}
+
+[aria-controls="navbarDropdown"] {
+  display: none;
 }
 
 .logoNavBar {
@@ -18,15 +39,25 @@
 .logoNavBar .logo img{
   width: auto;
   height: 50px;
-  margin-top: -5px;
+  margin-top: 5px;
 }
 
 .navBar {
+  display: flex;
   font-size: 8px;
   line-height: 0.8;
-  margin-left: auto;
-  margin-right: 25px;
+  margin-left: 0;
+  margin-right: auto;
   margin-top: 5px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 500;
+  transition: ease-in-out;
+  padding: var(--size-16);
+  max-width: 1200px;
 }
 
 .navBar ul {
@@ -34,6 +65,7 @@
   justify-content: space-between;
   margin-left: 50px;
   list-style-type: none;
+  margin-right: 25px;
 }
 
 .navBar ul li{
@@ -41,6 +73,7 @@
   font-size: 16px;
   line-height: .8;
   margin: 0 8px;
+  font-weight: 600;
 }
 
 .navBuyBtn {
@@ -48,16 +81,16 @@
   margin-right: 100px;
 }
 
-.navBuyBtn .btn-link {
-  position: relative;
-  top: -5px;
-}
-
 .btn-link .buyNow {
   font-size: 14px;
   color: white;
   margin-top: 12px;
   width: 115px;
+}
+
+.buyNow {
+  position: relative;
+  top: 6px;
 }
 
 .empTeams,
@@ -155,6 +188,7 @@
   font-weight: 600;
   margin-bottom: 30px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .icons {
@@ -270,10 +304,30 @@
   color: var(--font-color-link)
 }
 
- .premium {
+.premium {
   display: flex;
   align-items: center;
   height: 52px;
+}
+
+.premium,
+.withButton,
+.adjustMe,
+.documentationCard {
+  position: relative;
+}
+
+.premium {
+  top: 5px;
+}
+
+.withButton,
+.adjustMe {
+  top: 0;
+}
+
+.documentationCard {
+  top: -5px;
 }
 
 .submitButton1 {
@@ -648,6 +702,10 @@
   gap: 25px;
   margin-right: 20px;
   max-width: 600px;
+}
+
+.planFeatures .rowTwo p {
+  margin: 0;
 }
 
 .planFeatures img {

@@ -21,27 +21,29 @@
 
   <body>
     <section class="topSectionContainer">
-      <section class="topSection">
+      <nav class="topSection navbar">
         <div class="logoNavBar">
-          <div class="logo">
-            <img src="./assets/project_logo/logo.svg" alt="This Link Is Broken">
-          </div>
+          <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarDropdown">
+            <span>&#9776;</span>
+          </button>
           <div class="navBar">
-            <ul>
-              <li>Home</li>
-              <li>Features</li>
-              <li>Learn</li>
-              <li>Pricing</li>
-              <li>Hire us</li>
-            </ul>
-          </div>
-          <div class="navBuyBtn">
-            <div class="btn btn-link">
-              <div class="buyNow">Buy Now</div> 
+            <div class="logo">
+              <a href="index.html"><img src="./assets/project_logo/logo.svg" alt="This Link Is Broken"></a>
             </div>
-          </div>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Hire us</a></li>
+            </ul>
+            <div class="navBuyBtn">
+              <div class="btn btn-link">
+                <div class="buyNow">Buy Now</div> 
+              </div>
+            </div>
         </div>
-      </section>
+      </nav>
       <section class="empTeams"> 
         <div class="teams">
           <div class="empower">Empowering <br> teams with the <br> freedom...</div>
@@ -77,7 +79,7 @@
         <div class="cardSet card-grid">
           <a>
             <div class="card">
-              <img class="cardIcon" src="./assets/icons/responsive.svg">
+              <img class="cardIcon" src="./assets/icons/responsive.svg" alt="(this link is broken)">
               <h4>Responsive</h4>
               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at
                 its
@@ -117,7 +119,7 @@
           <a>
             <div class="card">
               <img class="cardIcon" src="./assets/icons/documentation.svg">
-              <h4>Documentation</h4>
+              <h4 class="documentationCard">Documentation</h4>
               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at
                 its
                 layout.</p>
@@ -282,8 +284,8 @@
                     <h3>Cancel anytyme</h3>
                     <div class="btn btn-link"><h6>sketch</h6></div>
                   </div>
-                <p>if its not for you, just cancel, no hidden costs or fees.</p>
-              </div>
+                  <p>if its not for you, just cancel, no hidden costs or fees.</p>
+                </div>
               <div class="moneyBack">
                 <img src="./assets/icons/moneyback.svg">
                 <h3>Money back</h3>
@@ -488,5 +490,24 @@
           </div>
       </div>
     </section>
+
+    <script>
+      const nav = document.getElementById("topNav");
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add("sticky");
+        } else {
+          nav.classList.remove("sticky");
+        }
+      }
+
+      const navButton = document.querySelector('button[aria-expanded]');
+      function toggleNav({ target }) {
+        const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+        navButton.setAttribute('aria-expanded', !expanded);
+      }
+
+      navButton.addEventListener('click', toggleNav);
+    </script>
   </body>
 </html>

@@ -1,5 +1,12 @@
 .topSectionContainer {
-  background-image: url(#);
+  background-image: url("/assets/svg/backgroundGradient.jpg");
+  background-color: var(--footer);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 90%;
+  position: center;
+  z-index: 1;
+  padding: 25px 0  20px 0;
 }
 
 .topSection {
@@ -21,6 +28,8 @@
 }
 
 .navbar-toggler span {
+  position: relative;
+  top:20px;
   color: var(--white);
   font-size: var(--size-20);
   cursor: pointer;
@@ -29,6 +38,11 @@
 
 [aria-controls="navbarDropdown"] {
   display: none;
+}
+
+.navbar .nav {
+  display: flex;
+  align-items: center;
 }
 
 .logoNavBar {
@@ -42,7 +56,7 @@
   margin-top: 5px;
 }
 
-.navBar {
+.navbar {
   display: flex;
   font-size: 8px;
   line-height: 0.8;
@@ -60,7 +74,7 @@
   max-width: 1200px;
 }
 
-.navBar ul {
+.navbar ul {
   display: flex;
   justify-content: space-between;
   margin-left: 50px;
@@ -68,12 +82,19 @@
   margin-right: 25px;
 }
 
-.navBar ul li{
+.navbar ul li{
   min-width: 50px;
   font-size: 16px;
   line-height: .8;
   margin: 0 8px;
   font-weight: 600;
+}
+
+.navbar-toggler span {
+  color: var(--font-color-dark);
+  outline: none;
+  background-color: transparent;
+  border: 1px solid transparent;
 }
 
 .navBuyBtn {
@@ -96,14 +117,8 @@
 .empTeams,
 .banner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(512px, 1fr) );
   margin-top: 60px;
-}
-
-.card-grid2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--size-30)
 }
 
 .teams {
@@ -281,17 +296,20 @@
   margin: 50px 0;
 }
 
-.card-grid {
+.card-grid,
+.card-grid2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(201px, 1fr));
   gap: var(--size-30)
 }
 
 .cardSet {
   display: grid;
+  justify-content: center;
 }
 
 .card {
+  display: grid;
   padding: var(--size-16);
   box-shadow: 0 0 20px rgba(48, 63, 100, 25%);
   background: var(--white);
@@ -356,7 +374,12 @@
 .card .adjustMe {
   display: grid;
   position: relative;
-  bottom: 16px;
+  margin-top: 30px;
+}
+
+
+.card .adjustMe {
+  margin-top: 25px;
 }
 
 .banner {
@@ -366,19 +389,19 @@
 
 .banner-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(512px, auto));
   grid-template-areas: "leftPanel rightPanel";
-  place-items: stretch;
-  justify-content: stretch;
   gap: var(--size-30);
 }
 
 .leftPanel {
+  display: grid;
   margin: 25px;
   grid-area: leftPanel;
 }
 
 .rightPanel {
+  display: grid;
   grid-area: rightPanel;
 }
 
@@ -413,14 +436,17 @@
   display: flex;
   justify-content: center;
   align-items: start;
-  min-width: 500px;
+  /* min-width: 500px; */
   margin-bottom: 100px;
+  margin-top: 80px;
 }
 
 .bullet img {
+  display: flex;
   border: 1px solid transparent;
   border-radius: 50%;
   margin: 0 5px;
+  
 }
 
 .bulletLeft .l-wing {
@@ -461,7 +487,8 @@
 }
 
 .wing {
-  width: 100%;
+  position: relative;
+  bottom: 2px;
 }
 
 .wing img{
@@ -499,7 +526,7 @@
 
 .hubSpotSection {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(472px, 1fr));
   gap: var(--size-30);
   margin-top: 100px;
   margin-left: 50px;
@@ -546,6 +573,7 @@
 
 .hubRight p {
   width: auto;
+  margin-right: 25px;
 }
 
 .hubRight .person h3 {
@@ -621,10 +649,12 @@
 .planSection {
   display: grid;
   margin-left: 100px;
+  min-width: 1024;
 }
 
 .plan {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .planHeader {
@@ -681,8 +711,11 @@
   justify-content: center;
 }
 
+.planFeatures {
+  display: flex;
+}
+
 .plan .planFeatures .rowWrapper {
-  display: inline-grid;
   max-width: 600px;
 }
 
@@ -696,8 +729,8 @@
 
 .planFeatures .rowOne,
 .planFeatures .rowTwo {
-  display: inline-grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(252px, 1fr));
   padding: 10px 25px;
   gap: 25px;
   margin-right: 20px;
@@ -742,22 +775,25 @@
 .hireUsSection {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(482px, 1fr));
   margin-top: 50px;
   padding: 30px;
 }
 
 .leftSide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 50px;
+  display: grid;
+  justify-content: left;
   background-color: rgb(32, 51, 91);
 }
 
-.top,
+.top {
+  margin-left: 25px;
+  margin-top: 100px;;
+}
+
+
 .bottom {
-  margin-left: 100px;
+  margin-left: 50px;
 }
 
 .leftSide .divider {
@@ -835,7 +871,7 @@
 
 .rightSide {
   display: grid;
-  grid-template-columns: 20px 1fr 1fr 20px;
+  grid-template-columns: 1fr 200px 200px 1fr;
   grid-template-rows: repeat(12, auto);
   display: grid;
   column-gap: 10px;
@@ -989,6 +1025,7 @@
   justify-content: space-around;
   max-width: 75%;
   margin-left: 10%;
+  cursor: pointer;
 }
 
 .privacyPolicy {
@@ -1015,27 +1052,44 @@
   background-color: var(--font-color-link);
   border-radius: 30px;
   width: 125px;
+  cursor: pointer;
 }
 
-.footerSection {
-  display: grid;
-}
 
 .footerTopWrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: .66fr .99fr;
   margin: 50px 0 50px 50px;
 }
 
 .footerCompanyContact {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "footerContact company features documentation resources";
 }
 
-.footerContact {
+.footerCompanyContact h2 {
+  font-size: var(--size-16);
+  font-weight: 800;
+}
+
+.footerCompanyContact ul {
+  font-size: var(--size-14);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+}
+
+.footerContact { 
+  dispaly: grid;
   margin-right: 25px;
+  min-width: 250px;
+  grid-area: footerContact;
 }
 
 .footerContact img {
-  width: 150px;
+  width: 100px;
   margin-bottom: 20px;
 }
 
@@ -1046,6 +1100,7 @@
 
 .footerContact p {
   margin: 3px;
+  font-size: var(--size-14);
 }
 
 .footerContact .colorLink {
@@ -1055,6 +1110,19 @@
 .footerCompanyInfo  {
   display: flex;
   margin-left: 20px;
+  grid-area: company;
+}
+
+.features {
+  grid-area: features;
+}
+
+.documentation {
+  grid-area: documentation;
+}
+
+.resources {
+  grid-area: resources;
 }
 
 .company,
@@ -1064,15 +1132,19 @@
   margin: 0 25px;
 }
 
-.footerCompanyInfo h2 {
-  margin-top: 0;
+.features,
+.documentation,
+.resources {
+    position: relative;
+    bottom: 14px;
 }
 
-.footerCompanyInfo  ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  line-height: 30px;
+.resources .account {
+  width: 110px;
+}
+
+.footerCompanyInfo h2 {
+  margin-top: 0;
 }
 
 .hiringBtn {
@@ -1097,6 +1169,11 @@
   color: white;
   font-size: 10px;
   min-width: 60px;
+}
+
+.footerSectionTwo {
+  position: relative;
+  bottom: 20px;
 }
 
 .footerLegalSocial {
@@ -1146,6 +1223,7 @@
   align-items: center;
   background-color: var(--font-color-base-light);
   border-radius: 5px;
+  margin-right: 25px;
 }
 
 .countryDropDown .oldGlory {
@@ -1177,10 +1255,6 @@
 
 .divider hr {
   color: var(--font-color-base-light);
-}
-
-.footerSection {
-  margin-left: 50px;
 }
 
 .copyrightTerms {

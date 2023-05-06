@@ -4,11 +4,11 @@
     display: block;
   }
 
-  [aria-expanded="false"]~ul {
+  [aria-expanded="false"] ~ ul {
     display: none;
   }
 
-  [aria-expanded="true"]~ul {
+  [aria-expanded="true"] ~ ul {
     display: block;
     position: absolute;
     right: 0;
@@ -24,6 +24,7 @@
     color: var(--font-color-dark);
   }
 
+/* topSectionContainer > empTeams Section */
   .empTeams {
     justify-content: center;
     text-align: center;
@@ -42,6 +43,16 @@
     margin-top: 15px;
   }
 
+/* keyBenefits, banner */
+  .keyBenefits,
+  .banner {
+    margin-top: 0;
+  }
+
+  .banner {
+    padding-top: 0;
+  }
+
   .banner-grid {
     grid-template-areas: 
     "leftPanel" 
@@ -55,6 +66,10 @@
   .hubRight {
     justify-content: center;
     text-align: center;
+  }
+
+  .hubRight {
+    margin-bottom: 50px;
   }
 
   .wing {
@@ -88,6 +103,10 @@
 
   .planFeatures {
     margin-top: 50px;
+  }
+
+  .hireUsSection {
+    justify-content: center;
   }
 
   .leftSide .container {
@@ -141,6 +160,11 @@
     margin: 0 20px;
   }
 
+  .footerTopWrapper {
+      grid-template-columns: .66fr;
+      justify-content: center;
+  }
+
   .footerCompanyContact {
     grid-template-areas: "footerContact company features"
       ". documentation resources";
@@ -170,6 +194,7 @@
     justify-content: center;
   }
 
+/* keyBenefits */
   .card { 
     margin: 10px;
   }

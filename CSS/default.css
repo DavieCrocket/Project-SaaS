@@ -56,6 +56,14 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -85,15 +93,27 @@ body {
   height: 50px;
 }
 
-.container {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 a:link {
   text-decoration: none;
   color: var(--font-color-base);
+}
+
+@media (min-width: 768px) {
+  /* .pricing-table,
+  .testimonial-grid,
+  .footer-bottom-wrapper {
+    max-width: 720px;
+  } */
+}
+
+@media (min-width: 992px) {
+  /* footer .footer-top {
+    max-width: 960px;
+  } */
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }
